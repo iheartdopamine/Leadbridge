@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+/*
+ * Tailwind v4: el theme se define con variables CSS dentro de @theme,
+ * en vez de un tailwind.config.js. Cada variable genera clases solas:
+ *   --color-brand -> bg-brand, text-brand, border-brand...
+ *   --font-display -> font-display
+ */
+@theme {
+  /* Color */
+  --color-paper: #f7f5f2;
+  --color-ink: #1c2530;
+  --color-graphite: #101826;
+
+  --color-brand: #2952e3;
+  --color-brand-dark: #1e3fb8;
+  --color-brand-light: #5b78ee;
+
+  --color-signal: #e8a33d;
+  --color-signal-dark: #c9821f;
+
+  --color-line: #e3dfd8;
+
+  /* Tipografía */
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+
+  /* Sombra reutilizable para tarjetas */
+  --shadow-card: 0 1px 2px rgba(28, 37, 48, 0.06), 0 8px 24px rgba(28, 37, 48, 0.08);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
