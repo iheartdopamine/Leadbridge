@@ -45,3 +45,27 @@
     scroll-behavior: auto !important;
   }
 }
+
+/*
+ * Elemento distintivo del Hero: un punto que "viaja" por cada segmento
+ * del diagrama Formulario -> Sheets -> CRM -> Discord, simulando el
+ * dato en tránsito. Cada segmento aplica esta animación con un
+ * animation-delay distinto (ver FlowDiagram.jsx) para que el efecto
+ * se lea como una posta, no como parpadeos sueltos.
+ */
+@keyframes flow-dot {
+  0% {
+    left: 0%;
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}

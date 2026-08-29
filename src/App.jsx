@@ -1,24 +1,29 @@
 // App.jsx
-// Fase 1: solo confirmamos que el entorno funciona. En la Fase 2
-// reemplazamos este contenido por los componentes reales de
-// src/components/sections (Hero, Beneficios, Formulario, etc.).
+// Compone la landing completa a partir de las secciones de
+// src/components/sections. El orden acá define el orden real de la
+// página.
+
+import Navbar from "./components/layout/Navbar.jsx";
+import Footer from "./components/layout/Footer.jsx";
+import Hero from "./components/sections/Hero.jsx";
+import Beneficios from "./components/sections/Beneficios.jsx";
+import ComoFunciona from "./components/sections/ComoFunciona.jsx";
+import PruebaSocial from "./components/sections/PruebaSocial.jsx";
+import CTAFinal from "./components/sections/CTAFinal.jsx";
 
 function App() {
   return (
-    <main className="min-h-screen flex items-center justify-center">
-      <div className="text-center px-6">
-        <p className="font-mono text-sm text-brand mb-2">
-          LEADBRIDGE · FASE 1 · SETUP OK
-        </p>
-        <h1 className="font-display text-3xl md:text-4xl font-semibold text-ink">
-          Entorno base funcionando 🎉
-        </h1>
-        <p className="mt-3 text-ink/70 max-w-md mx-auto">
-          Vite 8 + React 19 + Tailwind 4 están conectados. La landing real
-          se construirá en la Fase 2.
-        </p>
-      </div>
-    </main>
+    <>
+      <Navbar />
+      <main>
+        <Hero />
+        <Beneficios />
+        <ComoFunciona />
+        <PruebaSocial />
+        <CTAFinal />
+      </main>
+      <Footer />
+    </>
   );
 }
 
