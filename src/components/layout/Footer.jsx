@@ -25,6 +25,9 @@ function Footer() {
               {link.label}
             </a>
           ))}
+          <a href="#admin" className="text-sm hover:text-white transition-colors">
+            Panel de integraciones
+          </a>
         </nav>
       </Container>
 
