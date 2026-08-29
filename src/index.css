@@ -20,6 +20,7 @@
   --color-signal-dark: #c9821f;
 
   --color-line: #e3dfd8;
+  --color-danger: #c0413a; /* Errores de validación de formulario */
 
   /* Tipografía */
   --font-display: "Space Grotesk", sans-serif;

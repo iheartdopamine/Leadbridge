@@ -11,8 +11,8 @@ real a Google Sheets, un CRM y notificaciones por Webhooks (Discord/Slack).
   leads a mano.
 - **Cómo funciona**: los tres pasos reales del flujo de datos (completar
   formulario → Apps Script guarda la fila → se notifica por webhook).
-- **Prueba social** y **CTA final**, con el espacio reservado para el
-  formulario de cotización.
+- **Prueba social** y **CTA final**, con el formulario de cotización
+  (validado con react-hook-form + zod, con estados de carga, éxito y error).
 
 ## Stack
 
@@ -45,14 +45,18 @@ leadbridge/
 │   │   │   ├── Beneficios.jsx
 │   │   │   ├── ComoFunciona.jsx
 │   │   │   ├── PruebaSocial.jsx
-│   │   │   └── CTAFinal.jsx
+│   │   │   ├── CTAFinal.jsx
+│   │   │   └── FormularioContacto.jsx
 │   │   └── ui/
-│   │       └── FlowDiagram.jsx
+│   │       ├── FlowDiagram.jsx
+│   │       └── FormField.jsx
 │   ├── config/
 │   │   └── site.config.js
 │   ├── hooks/
 │   ├── services/
+│   │   └── leadsService.js
 │   ├── utils/
+│   │   └── leadSchema.js
 │   ├── App.jsx
 │   ├── main.jsx
 │   └── index.css
